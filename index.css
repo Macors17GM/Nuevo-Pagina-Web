@@ -2,7 +2,24 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+  font-family: 'Playfair Display', serif;
 }
 body{
   color: red;
+}
+img{
+  image-rendering: crisp-edges;
+}
+.logo{
+  width: 200px;
+  height: auto;
+  clip-path: circle(50% at 50% 50%);
+  object-position: center;
+  display: flex;
+  align-items: center;
+  position: absolute;
+  justify-content: center;
+  transform: translate(-50%, -50%);
+  top:10%;
+  left:50%;
 }
