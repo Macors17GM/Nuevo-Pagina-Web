@@ -1,0 +1,20 @@
+{
+  "name": "nuevo-pagina-web",
+  "version": "1.0.0",
+  "description": "",
+  "main": "1.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Macors17GM/Nuevo-Pagina-Web.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Macors17GM/Nuevo-Pagina-Web/issues"
+  },
+  "homepage": "https://github.com/Macors17GM/Nuevo-Pagina-Web#readme"
+}
