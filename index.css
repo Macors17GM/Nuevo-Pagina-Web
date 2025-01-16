@@ -10,6 +10,11 @@ body{
 img{
   image-rendering: crisp-edges;
 }
+header{
+  display: flex;
+  flex-direction: column;
+  gap:10px;
+}
 .logo{
   width: 200px;
   height: auto;
@@ -22,4 +27,13 @@ img{
   transform: translate(-50%, -50%);
   top:10%;
   left:50%;
+}
+.hero{
+  position: fixed;
+  align-items: center;
+  left:6%;
+  width: 90%;
+  height: 5px;
+  top:20%;
+  background-color: #873839;
 }
