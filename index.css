@@ -4,12 +4,20 @@
   box-sizing: border-box;
   font-family: 'Playfair Display', serif;
 }
+  html, body {
+    height: 120%;
+    margin: 0;
+    padding: 0;
+    overflow-x: hidden; 
+}
+
 body{
   background-image: url("imagenes/fondo.png")!important;
   background-repeat: no-repeat;
-  background-size: 100%;
+  background-size: 120%;
+  height: 120%;
   -webkit-backdrop-filter: blur(2000px);
-  backdrop-filter: blur(200px);
+  backdrop-filter: blur(20px);
   background: rgba(255,255,255,0.2);
 }
 img{
@@ -36,6 +44,15 @@ section{
   transform: translate(-50%, -50%);
   top:10%;
   left:50%;
+  animation: expandCircle 1.5s ease forwards;
+}
+  @keyframes expandCircle {
+  0% {
+    clip-path: circle(0); /* Totalmente recortado */
+  }
+  100% {
+    clip-path: circle(50% ); /* Sin recorte */
+  }
 }
 
 .container {
@@ -52,8 +69,20 @@ section{
   height: 5px;
   top: 20%;
   background-color: #873839;
-  
+  clip-path: inset(0 100% 0 0); /* Empieza completamente recortado */
+  animation: clipExpand 1.5s ease forwards; /* La animación */
 }
+
+@keyframes clipExpand {
+  0% {
+    clip-path: inset(0 50% 0 50%); /* Totalmente recortado */
+  }
+  100% {
+    clip-path: inset(0 0 0 0); /* Sin recorte */
+  }
+}
+
+
 .infoCard1,
 .infoCard2,
 .infoCard3{
@@ -67,6 +96,11 @@ section{
   left: 8%;
   transition: transform 0.3s ease-in-out;
   z-index: 10;
+  clip-path: inset(0 100% 0 0); /* Empieza completamente recortado */
+  animation: clipExpand 1.5s ease forwards;
+}
+@keyframes clipExoand{
+  
 }
 /*imagen de abajo*/
 .imagen3 {
@@ -77,7 +111,19 @@ section{
   display: flex;
   transition: transform 0.3s ease-in-out;
   z-index: 10;
+  clip-path: inset(0 100% 0 0); /* Empieza completamente recortado */
+  animation: clipExpand 0.9s ease forwards; /* La animación */
 }
+
+@keyframes clipExpand {
+  0% {
+    clip-path: inset(25% 25% 25% 25%); /* Totalmente recortado */
+  }
+  100% {
+    clip-path: inset(0 0 0 0); /* Sin recorte */
+  }
+}
+
 
 .imagen2 {
   cursor: pointer;
@@ -86,9 +132,19 @@ section{
   left: 50%;
   transition: transform 0.3s ease-in-out;
   z-index: 10;
+  clip-path: inset(0 100% 0 0); /* Empieza completamente recortado */
+  animation: clipExpand 0.9s ease forwards; /* La animación */
 }
 
-/* Efecto hover */
+@keyframes clipExpand {
+  0% {
+    clip-path: inset(25% 25% 25% 25%); /* Totalmente recortado */
+  }
+  100% {
+    clip-path: inset(0 0 0 0); /* Sin recorte */
+  }
+}
+
 .imagen2:hover {
   transform: rotate(20deg) scale(1.5);
   transition: transform 0.3s ease-in-out;
@@ -187,36 +243,21 @@ section{
   animation: ondaAnimacion 0.6s ease-out forwards; /* Animación */
   pointer-events: none;
   z-index: 200;
-  left: 50%;
+  left: 33%;
   top: 50%;
   transform: translate(-50%, -50%) scale(0); /* Centrado y escala 0 */
 }
 
-/* Animación para la onda */
-@keyframes ondaAnimacion {
-  0% {
-    transform: translate(-50%, -50%) scale(0);
-    opacity: 1;
-  }
-  50% {
-    transform: translate(-50%, -50%) scale(2); /* Escala hasta 2 veces su tamaño */
-    opacity: 0.5;
-  }
-  100% {
-    transform: translate(-50%, -50%) scale(5); /* Escala hasta 5 veces su tamaño */
-    opacity: 0;
-  }
-}
 
 
 
 .infoCard1{
   position: fixed;
-  bottom: 45%;
+  bottom: 54%;
   left: 34%;
   width: 400px;
   padding: 20px;
-  background-color: rgba(128, 128, 128, 0.2); /* Grisáceo */
+  background-color: rgba(128, 128, 128, 0.2); 
   border: 2px solid rgba(128, 128, 128, 0.5);
   border-radius:  60px 60px 60px;
   display: none; 
@@ -299,4 +340,91 @@ section{
   color: yellow;
   text-align: center;
   margin: 0 0 10px;
+}
+.Oferta1{
+  z-index: 14;
+  color: black;
+  font-size: 16px;
+  
+  text-shadow:
+  
+  0 0 5px #39FF14,
+  0 0 10px #32CD32,
+  0 0 20px #39FF14,
+  0 0 40px #32CD32;
+}
+
+.Oferta2{
+  z-index: 14;
+  color: black;
+  font-size: 16px;
+  
+  text-shadow:
+  
+  0 0 5px #39FF14,
+  0 0 10px #32CD32,
+  0 0 20px #39FF14,
+  0 0 40px #32CD32;
+}
+.Oferta3{
+  z-index: 14;
+  color:#101010;
+  font-size: 16px;
+  
+  text-shadow:
+  
+  0 0 5px #39FF14,
+  0 0 10px #32CD32,
+  0 0 20px #39FF14,
+  0 0 40px #32CD32;
+}
+footer{
+  height: 165px;
+  position: fixed;
+  background-color: #333333B3;
+  display: block;
+  align-items: center;
+  width: 100%;
+  top:96%;
+}
+.iconos{
+  position: fixed;
+  display: flex;
+  left:35%;
+  font-size: 40px;
+  flex-direction: row;
+  grid: 300px;
+  gap: 75px;
+  justify-content: space-between;
+}
+.linea{
+  width: 50%;
+  height: 5px;
+  background-color: #FFFF00;
+position: fixed;
+top:98%;
+  left: 23%;
+}
+#instagram{
+  color: white;
+  overflow: hidden;
+  background: linear-gradient(45deg,#8134AF,#DD2A7B, #FEDA77, #515BD4);
+  border-radius: 24px 24px 30px;
+}
+#whatsapp{
+  color: white;
+  overflow: hidden;
+  background-color: #25D366;
+  border-radius: 32px 30px 30px;
+}
+#mensaje{
+  color: white;
+}
+.descripcion-final{
+  font-size: 30px;
+  font-weight: 32px;
+  position: fixed;
+  display: block;
+  top:99%;
+  left: 33%;
 }
