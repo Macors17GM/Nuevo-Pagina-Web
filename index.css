@@ -20,6 +20,11 @@ body{
   backdrop-filter: blur(20px);
   background: rgba(255,255,255,0.2);
 }
+body.modo-oscuro {
+      background-color: #121212;
+      color: #ffffff;
+  background-image: url("imagenes/fondo2.png") !important;
+    }
 img{
   image-rendering: crisp-edges;
 }
@@ -55,6 +60,34 @@ section{
   }
 }
 
+.Description{
+  position: absolute;
+  top: 17%;
+  text-align: center;
+  left: 17%;
+  font-size: 1.4em;
+  font-family:  'Poppins', sans-serif;
+  flex-direction: column;
+  display: flex;
+  gap: 15px;
+  animation: clipExpand 1.5s ease forwards; /* La animación */
+}
+
+@keyframes clipExpand {
+  0% {
+    clip-path: inset(0 50% 0 50%); /* Totalmente recortado */
+  }
+  100% {
+    clip-path: inset(0 0 0 0); /* Sin recorte */
+  }
+}
+
+.descripcion_2{
+  color: #CCCC00;
+}
+body.modo-oscuro .descripcion_2{
+  color: rgba(255, 255, 0, 1);
+}
 .container {
   position: relative;
   width: 100%;
@@ -87,12 +120,13 @@ section{
 .infoCard2,
 .infoCard3{
   display: none;
+  background-color: rgba(140, 150, 140, 0.5);
 }
 /*imagen del medio */
 .imagen4 {
   cursor: pointer;
   position: fixed;
-  top: 55%;
+  top: 52%;
   left: 8%;
   transition: transform 0.3s ease-in-out;
   z-index: 10;
@@ -233,6 +267,7 @@ section{
     opacity: 0;
   }
 }
+
 .onda-amarilla3 {
   position: absolute;
   width: 40px;
@@ -249,21 +284,21 @@ section{
 }
 
 
-
-
 .infoCard1{
   position: fixed;
   bottom: 54%;
   left: 34%;
   width: 400px;
   padding: 20px;
-  background-color: rgba(128, 128, 128, 0.2); 
   border: 2px solid rgba(128, 128, 128, 0.5);
   border-radius:  60px 60px 60px;
   display: none; 
   box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
   backdrop-filter: blur(5px);
   z-index: 11;
+}
+body.modo-oscuro .infoCard1{
+  background-color: rgba(0, 0, 140, 0.5);
 }
 .infoBaja1{
   font-family: 'Roboto', sans-serif;
@@ -273,10 +308,25 @@ section{
 }
 .Precio1{
   font-family: 'Roboto', sans-serif;
-  font-weight: 700; /* Más grueso */
+  font-weight: 780; /* Más grueso */
   color: yellow;
   text-align: center;
   margin: 0 0 10px;
+  margin: 0 0 10px;
+  text-decoration: line-through blue; /* Dibuja una línea sobre el texto */
+  text-decoration-thickness: 2px; /* Ajusta el grosor de la línea */
+  color: #555; /* Cambia el color del texto si es necesario */
+  font-size: 1.5em;
+}
+.Precio-final1{
+  position: fixed;
+  left:70%;
+  bottom: 30%;
+  font-size: 1.8em;
+  color: #E8426D;
+}
+.modo-oscuro .Precio-final1{
+  color: #28A745;
 }
 
 /*imagen final */
@@ -286,7 +336,6 @@ section{
   top: 85%;
   width: 380px;
   padding: 20px;
-  background-color: rgba(128, 128, 128, 0.2); /* Grisáceo */
   border: 2px solid rgba(128, 128, 128, 0.5);
   border-radius: 60px;
   display: none; 
@@ -294,7 +343,9 @@ section{
   backdrop-filter: blur(5px);
   z-index: 11;
 }
-
+body.modo-oscuro .infoCard2{
+  background-color: rgba(0, 0, 140, 0.5);
+}
 .infoBaja2{
   font-family: 'Roboto', sans-serif;
   font-weight: 420;
@@ -306,19 +357,32 @@ section{
 
 .Precio2{
   font-family: 'Roboto', sans-serif;
-  font-weight: 740;
+  font-weight: 780;
   color: yellow;
   text-align: center;
   margin: 0 0 10px;
+  text-decoration: line-through blue ; /* Dibuja una línea sobre el texto */
+  text-decoration-thickness: 2px; /* Ajusta el grosor de la línea */
+  color: #555; /* Cambia el color del texto si es necesario */
+  font-size: 1.5em; /* Ajusta el tamaño de la fuente según tu diseño */
+}
+.Preciof2{
+  position: fixed;
+  left:70%;
+  bottom: 30%;
+  font-size: 1.8em;
+  color:#E8426D;
+}
+.modo-oscuro .Preciof2{
+  color: #28A745;
 }
 /*imagen del medio */
 .infoCard3{
   position: fixed;
   right: 60%;
   top: 66%;
-  width: 300px;
+  width: 380px;
   padding: 20px;
-  background-color: rgba(128, 128, 128, 0.2); /* Grisáceo */
   border: 2px solid rgba(128, 128, 128, 0.5);
   border-radius: 60px;
   display: none; 
@@ -326,7 +390,9 @@ section{
   backdrop-filter: blur(5px);
   z-index: 11;
 }
-
+body.modo-oscuro .infoCard3{
+  background-color: rgba(0, 0, 140, 0.5);
+}
 .infoBaja3{
   font-family: 'Roboto', sans-serif;
   font-weight: 400;
@@ -336,10 +402,25 @@ section{
 
 .Precio3{
   font-family: 'Roboto', sans-serif;
-  font-weight: 700; /* Más grueso */
+  font-weight: 780; /* Más grueso */
   color: yellow;
   text-align: center;
   margin: 0 0 10px;
+  margin: 0 0 10px;
+  text-decoration: line-through blue; /* Dibuja una línea sobre el texto */
+  text-decoration-thickness: 2px; /* Ajusta el grosor de la línea */
+  color: #555; /* Cambia el color del texto si es necesario */
+  font-size: 1.5em;
+}
+.Preciof3{
+  position: fixed;
+  left:70%;
+  bottom: 30%;
+  font-size: 1.8em;
+  color: #E8426D;
+}
+.modo-oscuro .Preciof3{
+  color: #28A745;
 }
 .Oferta1{
   z-index: 14;
@@ -347,7 +428,6 @@ section{
   font-size: 16px;
   
   text-shadow:
-  
   0 0 5px #39FF14,
   0 0 10px #32CD32,
   0 0 20px #39FF14,
@@ -427,4 +507,61 @@ top:98%;
   display: block;
   top:99%;
   left: 33%;
+}
+.toggle-button{
+  position: fixed;
+      top: 20px;
+      right: 50px;
+      padding: 10px 20px;
+  width: 80px;
+  height: 80px;
+      background-color: #ffd700; /* Color inicial: Sol */
+      color: #fff;
+      border: none;
+  border-radius: 50%;
+  box-shadow: 0 0 20px rgba(255, 215, 0, 0.6), 0 0 40px rgba(255, 215, 0, 0.3);
+  cursor: pointer;
+      transition: background-color 0.3s, color 0.3s;
+}
+.toggle-button:hover{
+  background-color: #444;
+  transform: scale(1.1);
+  box-shadow: 0 0 25px rgba(255, 215, 0, 0.8), 0 0 50px rgba(255, 215, 0, 0.5);
+}
+
+  .modo-oscuro .toggle-button {
+  background-color: #f0f0f0; /* Luna blanca */
+  box-shadow: 0 0 10px rgba(255, 255, 255, 0.4), 0 0 20px rgba(255, 255, 255, 0.2);
+
+}
+
+.modo-blanco .toggle-button{
+  background-color: #fff;
+      color: #000;
+}
+/* Cráteres pequeños en la luna */
+
+.modo-oscuro .toggle-button::after {
+  content: '';
+  position: absolute;
+  border-radius: 50%;
+  background-color: rgba(0, 0, 0, 0.15); /* Sombra de los cráteres */
+  box-shadow: 
+    2px 2px 5px rgba(0, 0, 0, 0.3), 
+    -2px -2px 5px rgba(255, 255, 255, 0.1);
+  z-index: 1;
+}
+.modo-oscuro .toggle-button::before {
+  content: '';
+  position: absolute;
+  top: 30%;
+  left: 30%;
+  width: 20px;
+  height: 20px;
+  background-color: rgba(0, 0, 0, 0.1);
+  border-radius: 50%;
+  box-shadow: 
+    10px 10px 0 rgba(0, 0, 0, 0.1), 
+    -15px -15px 0 rgba(0, 0, 0, 0.05),
+    20px -10px 0 rgba(0, 0, 0, 0.07);
 }

@@ -54,17 +54,20 @@ toggleCard(imagen4, infoCard3);
 
 imagen2.addEventListener('click', () => {
   infoCard1.style.display = 'block';
-  ocultarInfoCardConRetraso(infoCard1, 5000);
+  ocultarInfoCardConRetraso(infoCard1, 7000);
 });
 
 imagen3.addEventListener('click', () => {
   infoCard2.style.display = 'block';
-  ocultarInfoCardConRetraso(infoCard2, 6000);
+  ocultarInfoCardConRetraso(infoCard2, 7200);
 });
 
 imagen4.addEventListener('click', () => {
   infoCard3.style.display = 'block';
-  ocultarInfoCardConRetraso(infoCard3, 6500);
+  ocultarInfoCardConRetraso(infoCard3, 7300);
 });
+function toggleDarkMode() {
+  document.body.classList.toggle('modo-oscuro'); // Alterna la clase 'modo-oscuro' en el cuerpo
+}
 
 

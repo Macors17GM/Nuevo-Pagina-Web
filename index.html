@@ -2,21 +2,6 @@
 
 <html lang="es">
 <head>
-  <form
-  action="https://formspree.io/f/mvggnkrk"
-  method="POST"
->
-  <label>
-    Your email:
-    <input type="email" name="email">
-  </label>
-  <label>
-    Your message:
-    <textarea name="message"></textarea>
-  </label>
-  <!-- your other form fields go here -->
-  <button type="submit">Send</button>
-</form>
   
   <meta http-equiv="CONTENT-TYPE" content="text/html; charset=UTF-8">
   <link href="index.css" rel="stylesheet" href="styles/style.csa">
@@ -49,36 +34,46 @@
   <img  class="logo" id="logo"src="imagenes/imagen1.png" alt="No se puede cargar la imagen">
     
   </header>
-  
+  <ul class="Description">
+    <h1>HidroMiel para todo el Mundo 
+    </h1>
+    <p class="descripcion_2">Entrega a todo Eldorado</p>
+  </ul>
+  <button  id="modoOscuro"class="toggle-button" onclick="toggleDarkMode()"></button>
     <div id="imagenes"class="imagenes">
       
-    <img id="imagen2" class="imagen2" src="imagenes/imagen2.png" width="185px" height="auto">
+    <img id="imagen2" class="imagen2" src="imagenes/imagen2.png" width="185px" height="auto" alt="error">
         <div  id="infoCard1"class="infoCard1">
-        <p class="infoText1"><strong>Un mamgar hecho hace más de 8mil años, traido por su servidor </strong></p>
-        <p class="InfoBaja1">HidroMiel</p>
-        <p class="Precio1">4.500$</p>
+        <p class="infoText1"><strong>Un mangar hecho hace más de 8mil años, traido por su servidor </strong></p> <br>
+          
+        <p class="InfoBaja1"style="color: #FFFF0F; text-shadow: 
+               0 0 5px #FFFF0F; font-size:20px;">HidroMiel</p>
+          
+        <p class="Precio1">5.500$</p> <div><p class="Precio-final1">4.500$</p></div>
           <p class="Oferta1">¡OFERTA!</p>
           <ul>
           <button class="onda-amarilla1"></button>
           </ul>
       </div>
         
-    <img id="imagen3" class="imagen3" src="imagenes/imagen3.png" width="185px" height="auto">     
+    <img id="imagen3" class="imagen3" src="imagenes/imagen3.png" width="185px" height="auto" alt="error">     
  <div  id="infoCard2" class="infoCard2">
-        <p class="infoText2"><strong>Un mamgar hecho hace más de 8mil años, traido por su servidor </strong></p>
-        <p class="InfoBaja2">HidroMiel</p>
-        <p class="Precio2">4.500$</p> 
+        <p class="infoText2"><strong>Un mamgar hecho hace más de 8mil años, traido por su servidor </strong></p><br>
+        <p style="color: #FFFF0F; text-shadow: 
+               0 0 5px #FFFF0F; font-size:20px;" class="InfoBaja2">HidroMiel</p>
+        <p class="Precio2">7.000$</p> <p class="Preciof2">6.000$</p>
     <p class="Oferta2">¡OFERTA!</p>
    <ul>
    <button class="onda-amarilla2"></button>
    </ul>
         </div>
      
-    <img id="imagen4" class="imagen4" src="imagenes/imagen4.png" width="185px" height="auto">
+    <img id="imagen4" class="imagen4" src="imagenes/imagen4.png" width="185px" height="auto" loading="lazy" alt="Erro">
       <div  id="infoCard3"class="infoCard3">
-        <p class="infoText3"><strong>Un mamgar hecho hace más de 8mil años, traido por su servidor</strong> </p>
-        <p class="InfoBaja3">HidroMiel</p>
-        <p class="Precio3">4.500$</p>
+        <p class="infoText3"><strong>Un mamgar hecho hace más de 8mil años, traido por su servidor</strong> </p><br>
+        <p class="InfoBaja3"style="color: #FFFF0F; text-shadow: 
+               0 0 5px #FFFF0F; font-size:20px;">HidroMiel</p>
+        <p  style="fomt-size:23px;"class="Precio3">7.500$</p> <p class="Preciof3">6.500$</p>
          <p class="Oferta3">¡OFERTA!</p>
         <ul>
         <button class="onda-amarilla3"></button>
@@ -89,7 +84,7 @@
   <div class="hero"></div>
 </div>
    
-
+ <button  id="modoOscuro"class="toggle-button" onclick="toggleDarkMode()"></button>
    
   <script src="1.js"></script>
   <footer>
